@@ -126,11 +126,11 @@ MIT License - Same as the original [discord-rpc-csharp](https://github.com/Lache
 ## 🙏 Credits
 
 - Original Library: [Lachee/discord-rpc-csharp](https://github.com/Lachee/discord-rpc-csharp)
-- Native AOT Adaptation: [samse33](https://github.com/samse33)
+- Native AOT Adaptation: [samse1337](https://github.com/samse1337)
 
 ## 🐛 Issues
 
-If you encounter any issues with Native AOT compatibility, please report them on [GitHub Issues](https://github.com/samse33/DiscordRPC-NativeAOT/issues).
+If you encounter any issues with Native AOT compatibility, please report them on [GitHub Issues](https://github.com/samse1337/DiscordRPC-NativeAOT/issues).
 
 ---
 
@@ -258,8 +258,8 @@ MIT 许可证 - 与原始 [discord-rpc-csharp](https://github.com/Lachee/discord
 ## 🙏 致谢
 
 - 原始库：[Lachee/discord-rpc-csharp](https://github.com/Lachee/discord-rpc-csharp)
-- Native AOT 适配：[samse33](https://github.com/samse33)
+- Native AOT 适配：[samse1337](https://github.com/samse1337)
 
 ## 🐛 问题反馈
 
-如果遇到 Native AOT 兼容性问题，请在 [GitHub Issues](https://github.com/samse33/DiscordRPC-NativeAOT/issues) 上报告。
+如果遇到 Native AOT 兼容性问题，请在 [GitHub Issues](https://github.com/samse1337/DiscordRPC-NativeAOT/issues) 上报告。
