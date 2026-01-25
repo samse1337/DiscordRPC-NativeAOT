@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DiscordRPC-NativeAOT</AssemblyName>
+    <RootNamespace>DiscordRPC</RootNamespace>
+    
+    <!-- 启用 AOT 兼容性声明 -->
+    <IsAotCompatible>true</IsAotCompatible>
+    <IsTrimmable>true</IsAotCompatible>
+
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>full</TrimMode>
+
+    <!-- NuGet 元数据 -->
+    <PackageId>DiscordRPC-NativeAOT</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>samse</Authors>
+    <Company>PeusdoLancer</Company>
+    <Description>A high-performance, Native AOT compatible Discord Rich Presence client for .NET 9.0. Built with System.Text.Json Source Generation, zero reflection, and zero external dependencies.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>discord;rpc;rich-presence;native-aot;aot;json-source-gen</PackageTags>
+    <RepositoryUrl>https://github.com/你的用户名/DiscordRPC-NativeAOT</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 该库现在完全不依赖外部 JSON 库 -->
+  </ItemGroup>
+</Project>
