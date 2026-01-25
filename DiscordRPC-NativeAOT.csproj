@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DiscordRPC-NativeAOT</AssemblyName>
+    <RootNamespace>DiscordRPC</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    
+    <!-- 启用 AOT 兼容性声明 -->
+    <IsAotCompatible>true</IsAotCompatible>
+    <IsTrimmable>true</IsTrimmable>
+
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>full</TrimMode>
+
+    <!-- NuGet 元数据 -->
+    <PackageId>DiscordRPC-NativeAOT</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>samse</Authors>
+    <Company>PeusdoLancer</Company>
+    <Description>A high-performance, Native AOT compatible Discord Rich Presence client for .NET 9.0. Built with System.Text.Json Source Generation, zero reflection, and zero external dependencies. Fixed JSON deserialization for User fields (ID, discriminator, flags, premium_type) with custom converters.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>v1.0.1: Fixed User class JSON deserialization for Native AOT - Added UlongStringConverter, IntStringConverter, EnumStringConverter to handle Discord API string-to-number conversions</PackageReleaseNotes>
+    <PackageTags>discord;rpc;rich-presence;native-aot;aot;json-source-gen;dotnet9</PackageTags>
+    <RepositoryUrl>https://github.com/samse33/DiscordRPC-NativeAOT</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 该库现在完全不依赖外部 JSON 库 -->
+  </ItemGroup>
+</Project>
