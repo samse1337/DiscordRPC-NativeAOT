@@ -41,10 +41,10 @@ namespace DiscordRPC.RPC.Payload
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <returns></returns>
-		public T GetObject<T>()
-		{
-			return JsonSerializer.Deserialize<T>(Arguments.GetRawText(), DiscordJsonContext.Options);
-		}
+        public T GetObject<T>()
+        {
+            return Arguments.Deserialize(typeof(T), DiscordJsonContext.Default) is T value ? value : default;
+        }
 
 		public override string ToString()
 		{

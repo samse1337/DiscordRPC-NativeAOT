@@ -674,7 +674,6 @@ namespace DiscordRPC
         /// Name of the bot
         /// </summary>
         [JsonPropertyName("name")]
-        public string Name { get; private set; }
-
+        public new string Name { get; private set; }
     }
 }

@@ -38,11 +38,13 @@ namespace DiscordRPC.RPC.Payload
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <returns></returns>
-		public T GetObject<T>()
-		{
-			if (Data.ValueKind == JsonValueKind.Undefined || Data.ValueKind == JsonValueKind.Null) return default(T);
-            return JsonSerializer.Deserialize<T>(Data.GetRawText(), DiscordJsonContext.Options);
-		}
+        public T GetObject<T>()
+        {
+            if (Data.ValueKind == JsonValueKind.Undefined || Data.ValueKind == JsonValueKind.Null)
+                return default;
+
+            return Data.Deserialize(typeof(T), DiscordJsonContext.Default) is T value ? value : default;
+        }
 
         /// <summary>
         /// Converts the object into a human readable string
@@ -53,6 +55,4 @@ namespace DiscordRPC.RPC.Payload
 			return "Event " + base.ToString() + ", Event: " + (Event.HasValue ? Event.ToString() : "N/A");
 		}
 	}
-	
-
 }
