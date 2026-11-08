@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>DiscordRPC-NativeAOT</AssemblyName>
@@ -19,10 +19,10 @@
     <Version>1.0.2</Version>
     <Authors>samse1337</Authors>
     <Company>PeusdoLancer</Company>
-    <Description>A high-performance, Native AOT compatible Discord Rich Presence client for .NET 9.0. Built with System.Text.Json Source Generation, zero reflection, and zero external dependencies. Fixed JSON deserialization for User fields (ID, discriminator, flags, premium_type) with custom converters.</Description>
+    <Description>A high-performance, Native AOT compatible Discord Rich Presence client for .NET 10.0. Built with System.Text.Json Source Generation, zero reflection, and zero external dependencies. Fixed JSON deserialization for User fields (ID, discriminator, flags, premium_type) with custom converters.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>v1.0.2: Added bilingual (English/Chinese) README to NuGet package; Fixed author name to samse1337</PackageReleaseNotes>
-    <PackageTags>discord;rpc;rich-presence;native-aot;aot;json-source-gen;dotnet9</PackageTags>
+    <PackageTags>discord;rpc;rich-presence;native-aot;aot;json-source-gen;dotnet10</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/samse1337/DiscordRPC-NativeAOT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
