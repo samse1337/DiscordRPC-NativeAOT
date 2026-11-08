@@ -10,37 +10,37 @@ namespace DiscordRPC.RPC.Payload
     /// </summary>
     [JsonConverter(typeof(JsonStringEnumConverter<ServerEvent>))]
     internal enum ServerEvent
-	{
+    {
 
-		/// <summary>
-		/// Sent when the server is ready to accept messages
-		/// </summary>
-		[JsonStringEnumMemberName("READY")]
-		Ready,
+        /// <summary>
+        /// Sent when the server is ready to accept messages
+        /// </summary>
+        [JsonStringEnumMemberName("READY")]
+        Ready,
 
-		/// <summary>
-		/// Sent when something bad has happened
-		/// </summary>
-		[JsonStringEnumMemberName("ERROR")]
-		Error,
+        /// <summary>
+        /// Sent when something bad has happened
+        /// </summary>
+        [JsonStringEnumMemberName("ERROR")]
+        Error,
 
-		/// <summary>
-		/// Join Event 
-		/// </summary>
-		[JsonStringEnumMemberName("ACTIVITY_JOIN")]
-		ActivityJoin,
+        /// <summary>
+        /// Join Event 
+        /// </summary>
+        [JsonStringEnumMemberName("ACTIVITY_JOIN")]
+        ActivityJoin,
 
-		/// <summary>
-		/// Spectate Event
-		/// </summary>
-		[JsonStringEnumMemberName("ACTIVITY_SPECTATE")]
-		ActivitySpectate,
+        /// <summary>
+        /// Spectate Event
+        /// </summary>
+        [JsonStringEnumMemberName("ACTIVITY_SPECTATE")]
+        ActivitySpectate,
 
-		/// <summary>
-		/// Request Event
-		/// </summary>
-		[JsonStringEnumMemberName("ACTIVITY_JOIN_REQUEST")]
-		ActivityJoinRequest,
+        /// <summary>
+        /// Request Event
+        /// </summary>
+        [JsonStringEnumMemberName("ACTIVITY_JOIN_REQUEST")]
+        ActivityJoinRequest,
 
 #if INCLUDE_FULL_RPC
         //Old things that are obsolete

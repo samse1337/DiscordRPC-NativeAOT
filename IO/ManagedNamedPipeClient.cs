@@ -111,37 +111,37 @@ namespace DiscordRPC.IO
                 {
                     Logger.Info("Attempting to connect to '{0}'", pipename);
                     _stream = new NamedPipeClientStream(".", pipename, PipeDirection.InOut, PipeOptions.Asynchronous);
-                    
+
                     // Native AOT 适配：使用带超时的同步连接，避免无限阻塞
                     try
                     {
-                    	_stream.Connect(5000); // 5秒超时
-                    	Logger.Trace("Connect() returned, checking connection status...");
+                        _stream.Connect(5000); // 5秒超时
+                        Logger.Trace("Connect() returned, checking connection status...");
                     }
                     catch (TimeoutException)
                     {
-                    	Logger.Error("Connection to '{0}' timed out after 5 seconds", pipename);
-                    	Close();
-                    	return false;
+                        Logger.Error("Connection to '{0}' timed out after 5 seconds", pipename);
+                        Close();
+                        return false;
                     }
                     catch (IOException ex)
                     {
-                    	// Discord 未运行时会抛出 IOException: "All pipe instances are busy"
-                    	Logger.Error("Connection to '{0}' failed: {1}", pipename, ex.Message);
-                    	Close();
-                    	return false;
+                        // Discord 未运行时会抛出 IOException: "All pipe instances are busy"
+                        Logger.Error("Connection to '{0}' failed: {1}", pipename, ex.Message);
+                        Close();
+                        return false;
                     }
-                    
+
                     //Spin for a bit while we wait for it to finish connecting
                     Logger.Trace("Waiting for connection...");
                     int timeout = 100; // 1秒内确认连接状态
                     while (!_stream.IsConnected && timeout-- > 0) { Thread.Sleep(10); }
-                    
+
                     if (!_stream.IsConnected)
                     {
-                    	Logger.Error("Connection state check failed after Connect()");
-                    	Close();
-                    	return false;
+                        Logger.Error("Connection state check failed after Connect()");
+                        Close();
+                        return false;
                     }
                 }
 

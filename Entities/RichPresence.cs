@@ -49,7 +49,7 @@ namespace DiscordRPC
         }
         /// <summary>Inernal inner state URL string</summary>
         protected internal string _stateUrl;
-        
+
         /// <summary>
         /// Name that is displayed for the activity, replacing base application name
         /// <para>Max 256 characters</para>
@@ -405,7 +405,7 @@ namespace DiscordRPC
             StateUrl = stateUrl;
             return this;
         }
-        
+
         /// <summary>
         /// Sets the name of the Rich Presence. See also <seealso cref="BaseRichPresence.Name"/>.
         /// </summary>
@@ -674,7 +674,6 @@ namespace DiscordRPC
         /// Name of the bot
         /// </summary>
         [JsonPropertyName("name")]
-        public string Name { get; private set; }
-
+        public new string Name { get; private set; }
     }
 }
